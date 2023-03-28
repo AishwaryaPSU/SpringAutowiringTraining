@@ -4,8 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="heart" class="io.itsagm.autowiring.Heart"/>
-    <bean id="human" class="io.itsagm.autowiring.Human">
-        <property name="heart" ref="heart"/>
-    </bean>
+    <bean id="heartObject" class="io.itsagm.autowiring.Heart"/>
+    <bean id="human" class="io.itsagm.autowiring.Human" autowire="byType"/>
 </beans>
